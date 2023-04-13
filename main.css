@@ -20,6 +20,37 @@ body{
 .img1{
     width: 80%;
 }
+.titleplayer1{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    font-size: 200%;
+    color: white;
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+}
+.titleplayer2{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    font-size: 200%;
+    color:rgb(247, 193, 202);
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+}
+.title2{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    font-size: 150%;
+    color: white;
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+}
+.globalscore{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    font-size: 400%;
+    color: white;
+}
+.img2{
+    width: 30%;
+}
+
 
 .btn-primary{
     background-image: linear-gradient(450deg, rgb(92,225,230),rgb(92,225,230),rgb(105,139,232));
@@ -28,3 +59,51 @@ body{
 .btn-secondary{
     background-image: linear-gradient(90deg, rgb(243, 114, 209) 0%,rgb(44, 19, 241) 100%);
     }
+
+.image-container {
+        position: relative;
+        display: inline-block;
+}
+.image-container img {
+    width: 80%;
+    height: auto;
+  }
+  .image-container .text {
+    position: absolute;
+    bottom: 50px;
+    left: 44%;
+    /* ajustez la taille, la couleur et le style de la police selon vos préférences */
+    font-size: 24px;
+    color: white;
+    padding: 10px;
+  }
+  .cloud-color{
+   color: white
+  }
+  #cloud-title {
+    font-size: 2px;
+    font-weight: bold;
+    fill: grey;
+   
+}
+  #cloud-number {
+    font-size: 7px;
+    font-weight: bold;
+    fill: rgb(243, 34, 163);
+   
+}
+#cloud-title2 {
+    font-size: 2px;
+    font-weight: bold;
+    fill: grey;
+   
+}
+  #cloud-number2 {
+    font-size: 7px;
+    font-weight: bold;
+    fill: rgb(243, 34, 163);
+   
+}
+.cloud-container {
+    position: relative;
+}
