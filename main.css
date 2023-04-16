@@ -34,7 +34,13 @@ body{
     text-shadow: rgb(122, 122, 122) 4px 3px 0px;
 }
 /* TITLE FOR NUMBER TOTAL SCORE - PLAYER 1 AND 2*/
-.globalscore{
+.globalscore1{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold; 
+    font-size: 400%;
+    color: white;
+}
+.globalscore2{
     font-family: 'Lato', sans-serif;
     font-weight: bold; 
     font-size: 400%;
@@ -87,7 +93,13 @@ body{
     fill: grey;
    
 }
-  #cloud-number {
+  #cloud-number1 {
+    font-size: 7px;
+    font-weight: bold;
+    fill: rgb(243, 34, 163);
+   
+}
+#cloud-number2 {
     font-size: 7px;
     font-weight: bold;
     fill: rgb(243, 34, 163);
