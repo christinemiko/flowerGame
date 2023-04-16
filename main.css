@@ -178,3 +178,24 @@ body{
   }
   
 /* LOSE MESSAGE END*/
+/* TURN MESSAGE START*/
+.turn-message {
+    font-size: 24px;
+    color:rgb(253, 252, 252);
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+/* TURN MESSAGE END*/
+/*ICONS FOR LOSE MESSAGE */
+.icon-margin {
+    margin-left: 10px;
+    color: white;
+  }
+/*ICONS FOR WINNER MESSAGE */
+.winner-icon-margin {
+    margin-left: 10px;
+    color: white;
+  }
+  
+  
