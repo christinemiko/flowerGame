@@ -156,7 +156,7 @@ body{
 }
 /* STARS AROUND DICE PICTURE END*/
 
-/* WINNER MESSAGE*/
+/* WINNER MESSAGE START*/
 .winner-message {
     font-size: 24px;
     font-weight: bold;
@@ -165,4 +165,16 @@ body{
     text-align: center;
     display: none; /* Cachez le message par défaut */
   }
+ 
+/* WINNER MESSAGE END*/ 
+
+/* LOSE MESSAGE START*/
+.lose-message {
+    font-size: 24px;
+    color:rgb(253, 252, 252);
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+    text-align: center;
+    /*display: none; /* Cachez le message par défaut */
+  }
   
+/* LOSE MESSAGE END*/

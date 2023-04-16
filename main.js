@@ -9,6 +9,7 @@ const imageElement = document.getElementById("image-container");
 const currentScoreElement = document.getElementById("cloud-number1");
 const currentScoreElement2 = document.getElementById("cloud-number2");
 const winnerMessageElement = document.getElementById("winnerMessage");
+const messageElement = document.getElementById("losemessage");
 
 // Ajouter une variable pour déterminer le joueur en cours
 let currentPlayer = 1;
@@ -30,13 +31,33 @@ function evenementPlayer() {
     // Créez un nouvel élément img et définissez son attribut src sur l'URL de l'image
     imageElement.setAttribute("src", imageURL);
 
-      // Mettre à jour le score courant avec le nombre aléatoire
-      if (currentPlayer === 1) {
-        currentScore = randomNumber;
-        currentScoreElement.textContent = currentScore;
+     // Si le nombre aléatoire est égal à 1, réinitialisez le score courant et changez de joueur
+     if (randomNumber === 1) {
+        if (currentPlayer === 1) {
+            currentScore = 0;
+            currentScoreElement.textContent = currentScore;
+            messageElement.textContent = "Passez votre tour! Vous avez un dé de 1!";
+            messageElement.style.display = "block";
+        } else {
+            currentScore2 = 0;
+            currentScoreElement2.textContent = currentScore2;
+            messageElement.textContent = "Passez votre tour! Vous avez un dé de 1!";
+            messageElement.style.display = "block";
+        }
+
+     // Changer de joueur
+     currentPlayer = (currentPlayer === 1) ? 2 : 1;
     } else {
-        currentScore2 = randomNumber;
-        currentScoreElement2.textContent = currentScore2;
+        // Mettre à jour le score courant avec le nombre aléatoire
+        if (currentPlayer === 1) {
+            currentScore = randomNumber;
+            currentScoreElement.textContent = currentScore;
+           
+        } else {
+            currentScore2 = randomNumber;
+            currentScoreElement2.textContent = currentScore2;
+           
+        }
     }
 }
 
@@ -85,8 +106,15 @@ function loadScorePlayer() {
     currentPlayer = (currentPlayer === 1) ? 2 : 1;
 }
 
-button.addEventListener("click", evenementPlayer);
-loadScoreButton.addEventListener("click", loadScorePlayer);
+button.addEventListener("click", () =>{
+    messageElement.style.display = "none";
+    evenementPlayer();
+});
+
+loadScoreButton.addEventListener("click",() =>{
+    messageElement.style.display = "none";
+    loadScorePlayer();
+});
 
 // Fonction pour réinitialiser les compteurs des joueurs
 function resetCounters() {
