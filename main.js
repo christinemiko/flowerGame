@@ -2,11 +2,13 @@
 
 const button  = document.getElementById("roll-dice");
 const loadScoreButton = document.getElementById("load-score");
+const newGameButton = document.getElementById("newGameButton");
 const player1GlobalScoreElement = document.getElementById('player1-global-score');
 const player2GlobalScoreElement = document.getElementById('player2-global-score');
 const imageElement = document.getElementById("image-container");
 const currentScoreElement = document.getElementById("cloud-number1");
 const currentScoreElement2 = document.getElementById("cloud-number2");
+const winnerMessageElement = document.getElementById("winnerMessage");
 
 // Ajouter une variable pour déterminer le joueur en cours
 let currentPlayer = 1;
@@ -51,7 +53,8 @@ function loadScorePlayer() {
         // Vérifier si le joueur a gagné
         if (player1GlobalScore >= 100) {
             // Afficher un message pour annoncer le gagnant
-            alert('Le joueur 1 a gagné !');
+            winnerMessageElement.textContent = 'Le joueur 1 a gagné !';
+            winnerMessageElement.style.display = 'block';
 
             // Désactiver les boutons pour arrêter le jeu
             button.disabled = true;
@@ -69,7 +72,8 @@ function loadScorePlayer() {
         // Vérifier si le joueur a gagné
         if (player2GlobalScore >= 100) {
             // Afficher un message pour annoncer le gagnant
-            alert('Le joueur 2 a gagné !');
+            winnerMessageElement.textContent = 'Le joueur 2 a gagné !';
+            winnerMessageElement.style.display = 'block';
 
             // Désactiver les boutons pour arrêter le jeu
             button.disabled = true;
@@ -81,10 +85,36 @@ function loadScorePlayer() {
     currentPlayer = (currentPlayer === 1) ? 2 : 1;
 }
 
-
 button.addEventListener("click", evenementPlayer);
 loadScoreButton.addEventListener("click", loadScorePlayer);
 
-//evenement(); concerne le rechargement de page
+// Fonction pour réinitialiser les compteurs des joueurs
+function resetCounters() {
+
+  // Mettez les compteurs de joueur à zéro ici
+  // Par exemple :
+  currentScore = 0;
+  currentScore2 = 0;
+  player1GlobalScore = 0;
+  player2GlobalScore = 0;
+
+    // Mettre à jour les éléments HTML pour afficher les nouveaux scores
+    currentScoreElement.textContent = currentScore;
+    currentScoreElement2.textContent = currentScore2;
+    player1GlobalScoreElement.textContent = player1GlobalScore;
+    player2GlobalScoreElement.textContent = player2GlobalScore;
+
+    button.disabled = false;
+    loadScoreButton.disabled = false;
+    winnerMessageElement.style.display = 'none';
+ 
+}
+
+newGameButton.addEventListener("click", () => {
+  resetCounters();
+
+});
+
+
 
 /* BUTTON ROLL DICE END*/ 

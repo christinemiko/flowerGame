@@ -154,3 +154,15 @@ body{
     margin-right: 200px;
     color: rgb(181, 243, 171);
 }
+/* STARS AROUND DICE PICTURE END*/
+
+/* WINNER MESSAGE*/
+.winner-message {
+    font-size: 24px;
+    font-weight: bold;
+    color:rgb(247, 247, 247);
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+    text-align: center;
+    display: none; /* Cachez le message par défaut */
+  }
+  
