@@ -1,5 +1,3 @@
-/* BUTTON ROLL DICE START*/ 
-
 const button  = document.getElementById("roll-dice");
 const loadScoreButton = document.getElementById("load-score");
 const newGameButton = document.getElementById("newGameButton");
@@ -191,6 +189,3 @@ newGameButton.addEventListener("click", () => {
 
 });
 
-
-
-/* BUTTON ROLL DICE END*/ 
