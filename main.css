@@ -202,5 +202,14 @@ body{
     margin-left: 10px;
     color: white;
   }
-  
-  
+  /*LINK RULES */
+  .rules{
+    font-size: 20px;
+    color: white;
+   
+  }
+  /* RULES */
+  .rules-text{
+     color:rgb(253, 252, 252);
+    text-shadow: rgb(122, 122, 122) 4px 3px 0px;
+  }
