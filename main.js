@@ -12,11 +12,11 @@ const currentScoreElement2 = document.getElementById("cloud-number2");
 const winnerMessageElement = document.getElementById("winnerMessage");
 const messageElement = document.getElementById("losemessage");
 
-// Ajouter une variable pour déterminer le joueur en cours
+// Ajout une variable pour déterminer le joueur en cours
 
 let currentPlayer = 1;
 
-// Ajouter une variable pour stocker le score
+// Ajout des variables pour stocker le score
 
 let currentScore = 0;
 let currentScore2 = 0;
@@ -26,8 +26,16 @@ let player2GlobalScore = 0;
 // Fonction pour mettre à jour le message du tour du joueur
 
 function updateTurnMessage() {
-    turnMessageElement.textContent = `Jeu du Joueur ${currentPlayer}`;
-  }
+    const playerTurnIcon = currentPlayer === 1 ? `
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-emoji-smile-fill" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z"/>
+    </svg>` : `
+    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-emoji-wink-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM7 6.5C7 5.672 6.552 5 6 5s-1 .672-1 1.5S5.448 8 6 8s1-.672 1-1.5zM4.285 9.567a.5.5 0 0 0-.183.683A4.498 4.498 0 0 0 8 12.5a4.5 4.5 0 0 0 3.898-2.25.5.5 0 1 0-.866-.5A3.498 3.498 0 0 1 8 11.5a3.498 3.498 0 0 1-3.032-1.75.5.5 0 0 0-.683-.183zm5.152-3.31a.5.5 0 0 0-.874.486c.33.595.958 1.007 1.687 1.007.73 0 1.356-.412 1.687-1.007a.5.5 0 0 0-.874-.486.934.934 0 0 1-.813.493.934.934 0 0 1-.813-.493z"/>
+    </svg>`;
+    
+      turnMessageElement.innerHTML = `Jeu du Joueur ${currentPlayer}${playerTurnIcon}`;
+    }
   
   // Appelez la fonction pour définir le message initial
 
@@ -44,7 +52,7 @@ function evenementPlayer() {
     // Construire le chemin de l'image en fonction du nombre aléatoire
     const imageURL = `./images/des${randomNumber}.png`;
 
-    // Créez un nouvel élément img et définition de l'attribut src sur l'URL de l'image
+    // Création d'un nouvel élément img et définition de l'attribut src sur l'URL de l'image
     imageElement.setAttribute("src", imageURL);
 
     const iconSpan = document.createElement('span');
