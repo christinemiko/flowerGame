@@ -4,6 +4,7 @@ const newGameButton = document.getElementById("newGameButton");
 const newGameAudioElement = new Audio('sound/newGame.mp3');
 const loadScoreAudioElement = new Audio('sound/holdScore.mp3');
 const rollDiceAudioElement = new Audio('sound/launchRolldice.mp3'); 
+const diceOneAudioElement = new Audio('sound/gameLose.mp3');
 const turnMessageElement = document.getElementById("turn-message");
 const player1GlobalScoreElement = document.getElementById('player1-global-score');
 const player2GlobalScoreElement = document.getElementById('player2-global-score');
@@ -44,6 +45,11 @@ function updateTurnMessage() {
 
   // Fonction pour Bouton Lancer les dès
 
+  function playDiceOneAudio() {
+    diceOneAudioElement.currentTime = 0;
+    diceOneAudioElement.play();
+  }
+
 function evenementPlayer() {
 
     // Générer un nombre aléatoire entre 1 et 6
@@ -64,6 +70,7 @@ function evenementPlayer() {
 
      // Si le nombre aléatoire est égal à 1, réinitialisez le score courant et changez de joueur
      if (randomNumber === 1) {
+        playDiceOneAudio();
         if (currentPlayer === 1) {
             currentScore = 0;
             currentScoreElement.textContent = currentScore;
