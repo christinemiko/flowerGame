@@ -2,7 +2,8 @@ const button  = document.getElementById("roll-dice");
 const loadScoreButton = document.getElementById("load-score");
 const newGameButton = document.getElementById("newGameButton");
 const newGameAudioElement = new Audio('sound/newGame.mp3');
-const loadScoreAudioElement = new Audio('sound/holdScore.mp3'); 
+const loadScoreAudioElement = new Audio('sound/holdScore.mp3');
+const rollDiceAudioElement = new Audio('sound/launchRolldice.mp3'); 
 const turnMessageElement = document.getElementById("turn-message");
 const player1GlobalScoreElement = document.getElementById('player1-global-score');
 const player2GlobalScoreElement = document.getElementById('player2-global-score');
@@ -154,14 +155,21 @@ function loadScorePlayer() {
     updateTurnMessage();
 }
 
+function playRollDiceAudio() {
+    rollDiceAudioElement.currentTime = 0;
+    rollDiceAudioElement.play();
+  }
+
 function playLoadScoreAudio() {
     loadScoreAudioElement.currentTime = 0;
     loadScoreAudioElement.play();
   }
 
+
 button.addEventListener("click", () =>{
     messageElement.style.display = "none";
     evenementPlayer();
+    playRollDiceAudio();
 });
 
 loadScoreButton.addEventListener("click",() =>{
