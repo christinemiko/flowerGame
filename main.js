@@ -5,6 +5,7 @@ const newGameAudioElement = new Audio('sound/newGame.mp3');
 const loadScoreAudioElement = new Audio('sound/holdScore.mp3');
 const rollDiceAudioElement = new Audio('sound/launchRolldice.mp3'); 
 const diceOneAudioElement = new Audio('sound/gameLose.mp3');
+const winAudioElement = new Audio('sound/victory.mp3');
 const turnMessageElement = document.getElementById("turn-message");
 const player1GlobalScoreElement = document.getElementById('player1-global-score');
 const player2GlobalScoreElement = document.getElementById('player2-global-score');
@@ -43,14 +44,14 @@ function updateTurnMessage() {
 
   updateTurnMessage();
 
-  // Fonction pour Bouton Lancer les dès
-
-  function playDiceOneAudio() {
+  // MP3/ SOUND pour Joueur perdant
+    function playDiceOneAudio() {
     diceOneAudioElement.currentTime = 0;
     diceOneAudioElement.play();
-  }
+    }
 
-function evenementPlayer() {
+    // Fonction pour Bouton Lancer les dès
+    function evenementPlayer() {
 
     // Générer un nombre aléatoire entre 1 et 6
     const randomNumber = Math.floor(Math.random() * 6) + 1;
@@ -101,6 +102,10 @@ function evenementPlayer() {
         }
     }
 }
+  // MP3 / SOUND pour le joueur gagnant
+   function playWinSound() {
+   winAudioElement.play();
+   }
 
  // Fonction pour bouton Charger le score
 
@@ -116,6 +121,8 @@ function loadScorePlayer() {
 
         // Vérifier si le joueur a gagné
         if (player1GlobalScore >= 100) {
+            playWinSound();
+
             // Afficher un message pour annoncer le gagnant
             const winnerIconSpan = document.createElement('span');
             winnerIconSpan.classList.add('winner-icon-margin');
@@ -141,6 +148,8 @@ function loadScorePlayer() {
 
         // Vérifier si le joueur a gagné
         if (player2GlobalScore >= 100) {
+            playWinSound();
+
             // Afficher un message pour annoncer le gagnant
             const winnerIconSpan = document.createElement('span');
             winnerIconSpan.classList.add('winner-icon-margin');
@@ -162,11 +171,13 @@ function loadScorePlayer() {
     updateTurnMessage();
 }
 
+ // MP3 / SOUND pour bouton Lancer les dès
 function playRollDiceAudio() {
     rollDiceAudioElement.currentTime = 0;
     rollDiceAudioElement.play();
   }
 
+ // MP3 / SOUND pour bouton Charger le score
 function playLoadScoreAudio() {
     loadScoreAudioElement.currentTime = 0;
     loadScoreAudioElement.play();
@@ -206,7 +217,7 @@ function resetCounters() {
     winnerMessageElement.style.display = 'none';
  
 }
-
+  // MP3/ SOUND pour bouton nouvelle partie
 function playNewGameAudio() {
     newGameAudioElement.currentTime = 0;
     newGameAudioElement.play();
