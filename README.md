@@ -9,7 +9,7 @@ Les éléments visuels et la charte graphique ont été soigneusement modifiés 
 Pour enrichir l'expérience utilisateur, j'ai ajouté des effets sonores lors des clics sur les différents boutons et lorsqu'un joueur a remporté la partie.
 
 Fonctionnalités :
-Le jeu propose une expérience de jeu fluide et engageante pour deux joueurs. Le déroulement du jeu est simple et intuitif, avec des règles faciles à comprendre et des mécaniques de jeu stimulantes. Les règles du jeu sont accéssibles , sous le bouton "nouvelle partie".
+Le jeu propose une expérience de jeu fluide et engageante pour deux joueurs. Le déroulement du jeu est simple et intuitif, avec des règles faciles à comprendre et des mécaniques de jeu stimulantes. Les règles du jeu sont accessibles , sous le bouton "nouvelle partie".
 
 Conclusion :
 Ce jeu de dés interactif est un exemple de la manière dont l'art contemporain et la technologie peuvent se combiner pour créer des expériences ludiques et visuellement captivantes.
