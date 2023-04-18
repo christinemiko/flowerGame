@@ -1,9 +1,8 @@
 
 # Flowers Game  
 
-<div style="display: flex; justify-content: center;">
   <img src="./images/joueur1ok.png" alt="github" width="200" height="200">
-</div>
+
 
 
 
