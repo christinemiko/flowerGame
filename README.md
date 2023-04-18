@@ -1,8 +1,8 @@
 
-# Flowers Game   
-<p align="center">
-  <img src="./images/joueur1ok.png" alt="github" width="100" height="100">
-</p>
+# Flowers Game  
+
+  <img src="./images/joueur1ok.png" alt="github" width="150" height="150">
+
 
 Inspiré par l'artiste contemporain Takashi Murakami, ce jeu de dés interactif pour deux joueurs allie créativité, couleurs vives et divertissement. Développé en utilisant les technologies HTML, CSS, Bootstrap et JavaScript /ES6, le jeu offre une expérience utilisateur ludique, adaptée à tous les navigateurs et entièrement responsive. 
 
